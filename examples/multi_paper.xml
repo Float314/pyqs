@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: two papers in one file.
+
+  A document may contain several <paper> sections; pyqs treats each one as an
+  independent paper, which keeps a whole examination in a single file while
+  still allowing per-year analysis.
+
+  Run:  pyqs summary examples/multi_paper.xml
+        pyqs trend   examples/multi_paper.xml
+-->
+<pyqs version="1.0" latex="true">
+
+    <paper exam="JEE (Main)" year="2022" subject="Mathematics" board="CBSE">
+
+        <question_body id="Q1" type="mcq" marks="1" topic="Limits">
+            <question>
+                $\displaystyle\lim_{x\to0}\frac{\tan x}{x}$ is
+            </question>
+            <option name="A">$0$</option>
+            <option name="B">$1$</option>
+            <option name="C">$\infty$</option>
+            <option name="D">Does not exist</option>
+            <answer>B</answer>
+        </question_body>
+
+        <question_body id="Q2" type="short_answer" marks="2" topic="Matrices">
+            <question>
+                Find the product $\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix}
+                \begin{bmatrix}2&amp;3\end{bmatrix}$.
+            </question>
+            <answer>
+                The product is $\begin{bmatrix}2&amp;3\end{bmatrix}$.
+            </answer>
+        </question_body>
+
+        <question_body id="Q3" type="numerical" marks="4" topic="Probability">
+            <question>
+                Two fair dice are rolled. What is the probability that the sum
+                of the numbers shown is $7$?
+            </question>
+            <answer>
+                There are $36$ outcomes and $6$ of them give a sum of $7$, so
+                the probability is $\tfrac16\approx 0.1667$.
+            </answer>
+        </question_body>
+
+    </paper>
+
+    <paper exam="JEE (Main)" year="2023" subject="Mathematics" board="CBSE">
+
+        <question_body id="Q1" type="mcq" marks="1" topic="Limits">
+            <question>
+                $\displaystyle\lim_{x\to\infty}\left(1+\dfrac{1}{x}\right)^{x}$ is
+            </question>
+            <option name="A">$1$</option>
+            <option name="B">$e$</option>
+            <option name="C">$0$</option>
+            <option name="D">$\infty$</option>
+            <answer>B</answer>
+        </question_body>
+
+        <question_body id="Q2" type="long_answer" marks="6" topic="Calculus">
+            <question>
+                Let $f(x)=x^{3}-3x$. Answer the following.
+            </question>
+            <parts>
+                <part id="a" marks="2">Find the critical points of $f$.</part>
+                <part id="b" marks="2">Classify each of them.</part>
+                <part id="c" marks="2">Find the local maximum value.</part>
+            </parts>
+        </question_body>
+
+        <question_body id="Q3" type="mcq" marks="1" topic="Probability">
+            <question>
+                If two fair dice are rolled, the probability that the product of
+                the numbers is even is
+            </question>
+            <option name="A">$\tfrac14$</option>
+            <option name="B">$\tfrac12$</option>
+            <option name="C">$\tfrac34$</option>
+            <option name="D">$\tfrac56$</option>
+            <answer>C</answer>
+        </question_body>
+
+        <question_body id="Q4" type="short_answer" marks="2" topic="Matrices">
+            <question>
+                Determine the rank of
+                $\begin{bmatrix}1&amp;2\\2&amp;4\end{bmatrix}$.
+            </question>
+            <answer>
+                Row 2 is twice row 1, so the rank is $1$.
+            </answer>
+        </question_body>
+
+    </paper>
+
+</pyqs>

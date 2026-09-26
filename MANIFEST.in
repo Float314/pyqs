@@ -1,0 +1,10 @@
+# The test suite drives the CLI against the bundled banks, so both have to
+# travel with the sdist or "pytest" on an unpacked tarball cannot work.
+include CHANGELOG.md
+include LICENSE
+include README.md
+recursive-include tests *.py
+recursive-include examples *.xml
+include examples/README.md
+exclude .gitignore
+prune .github

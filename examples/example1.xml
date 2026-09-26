@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pyqs version="1.0" latex="true">
+
+    <!-- Question 1: MCQ -->
+    <question_body id="Q1" type="mcq" marks="1" topic="Calculus">
+        <question>
+            Given that the derivative of function $f(x)$ is
+            $\sin(x)-\cos(x)$, what is the second derivative?
+        </question>
+
+        <option name="A">$\cos(x)-\sin(x)$</option>
+        <option name="B">$-\sin(x)-\cos(x)$</option>
+        <option name="C">$\sin(x)+\cos(x)$</option>
+        <option name="D">$-\cos(x)+\sin(x)$</option>
+
+        <answer>B</answer>
+    </question_body>
+
+
+    <!-- Question 2: MCQ with a mathematical expression -->
+    <question_body id="Q2" type="mcq" marks="1" topic="Algebra">
+        <question>
+            If $x^2-5x+6=0$, what are the possible values of $x$?
+        </question>
+
+        <option name="A">$1,6$</option>
+        <option name="B">$2,3$</option>
+        <option name="C">$-2,-3$</option>
+        <option name="D">$-1,-6$</option>
+
+        <answer>B</answer>
+    </question_body>
+
+
+    <!-- Question 3: Short-answer -->
+    <question_body id="Q3" type="short_answer" marks="2" topic="Differentiation">
+        <question>
+            Differentiate the following function with respect to $x$:
+            \[
+                y = x^3\sin(x)
+            \]
+        </question>
+
+        <answer>
+            Using the product rule,
+            \[
+                \frac{dy}{dx}
+                = 3x^2\sin(x)+x^3\cos(x)
+            \]
+        </answer>
+    </question_body>
+
+
+    <!-- Question 4: Long-answer with subparts -->
+    <question_body id="Q4" type="subjective" marks="5" topic="Applications of Derivatives">
+        <question>
+            A particle moves along a straight line such that its displacement
+            at time $t$ is given by
+            \[
+                s(t)=t^3-6t^2+9t.
+            \]
+            Answer the following questions.
+        </question>
+
+        <parts>
+
+            <part id="a" marks="2">
+                Find the velocity of the particle at time $t$.
+            </part>
+
+            <part id="b" marks="1">
+                Find the acceleration at time $t=2$.
+            </part>
+
+            <part id="c" marks="2">
+                Determine the values of $t$ for which the particle is at rest.
+            </part>
+
+        </parts>
+    </question_body>
+
+
+    <!-- Question 5: MCQ involving an equation -->
+    <question_body id="Q5" type="mcq" marks="1" topic="Limits">
+        <question>
+            Evaluate
+            \[
+                \lim_{x\to0}\frac{\sin x}{x}.
+            \]
+        </question>
+
+        <option name="A">$0$</option>
+        <option name="B">$1$</option>
+        <option name="C">$\infty$</option>
+        <option name="D">Does not exist</option>
+
+        <answer>B</answer>
+    </question_body>
+
+
+    <!-- Question 6: Theory -->
+    <question_body id="Q6" type="short_answer" marks="2" topic="Functions">
+        <question>
+            Define an even function and give one example.
+        </question>
+
+        <answer>
+            A function $f(x)$ is even if
+            \[
+                f(-x)=f(x)
+            \]
+            for every $x$ in its domain. For example,
+            $f(x)=x^2$ is an even function.
+        </answer>
+    </question_body>
+
+
+    <!-- Question 7: Numerical -->
+    <question_body id="Q7" type="numerical" marks="3" topic="Differential Equations">
+        <question>
+            Solve the differential equation
+            \[
+                \frac{dy}{dx}=3x^2
+            \]
+            given that $y(0)=4$.
+        </question>
+
+        <answer>
+            Integrating,
+            \[
+                y=x^3+C.
+            \]
+            Since $y(0)=4$, $C=4$. Therefore,
+            \[
+                y=x^3+4.
+            \]
+        </answer>
+    </question_body>
+
+
+    <!-- Question 8: Assertion-Reason -->
+    <question_body id="Q8" type="assertion_reason" marks="1" topic="Calculus">
+        <assertion>
+            If $f(x)=x^2$, then $f'(x)=2x$.
+        </assertion>
+
+        <reason>
+            The derivative of $x^n$ is $nx^{n-1}$.
+        </reason>
+
+        <option name="A">
+            Both Assertion and Reason are true, and Reason is the correct
+            explanation of Assertion.
+        </option>
+
+        <option name="B">
+            Both Assertion and Reason are true, but Reason is not the correct
+            explanation of Assertion.
+        </option>
+
+        <option name="C">
+            Assertion is true, but Reason is false.
+        </option>
+
+        <option name="D">
+            Assertion is false, but Reason is true.
+        </option>
+
+        <answer>A</answer>
+    </question_body>
+
+</pyqs>

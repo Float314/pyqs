@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: JEE (Main) Mathematics, session 2023.
+
+  Shows the canonical pyqs shape: a <pyqs> root carrying paper metadata, and one
+  <question_body> element per question. Topic lives in an attribute, LaTeX is
+  embedded in the text and answer elements.
+
+  Run:  pyqs summary examples/jee_main_2023.xml
+        pyqs topics  examples/jee_main_2023.xml
+-->
+<pyqs version="1.0" latex="true" exam="JEE (Main)" year="2023" subject="Mathematics" board="CBSE">
+
+    <question_body id="Q1" type="mcq" marks="1" topic="Complex Numbers">
+        <question>
+            If $z=\dfrac{1+i}{1-i}$, then $z$ equals
+        </question>
+        <option name="A">$i$</option>
+        <option name="B">$-i$</option>
+        <option name="C">$1$</option>
+        <option name="D">$-\dfrac{1}{2}$</option>
+        <answer>A</answer>
+    </question_body>
+
+    <question_body id="Q2" type="mcq" marks="1" topic="Quadratic Equations">
+        <question>
+            The sum of all real roots of $x^{2}-5x+6=0$ is
+        </question>
+        <option name="A">$3$</option>
+        <option name="B">$5$</option>
+        <option name="C">$6$</option>
+        <option name="D">$-6$</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q3" type="assertion_reason" marks="1" topic="Sequences &amp; Series">
+        <assertion>
+            The sum of the first $n$ terms of the arithmetic progression
+            $2, 5, 8, \dots$ is $n(3n-1)$.
+        </assertion>
+        <reason>
+            The $n$-th term of the progression is $3n-1$.
+        </reason>
+        <option name="A">
+            Both Assertion and Reason are true, and Reason is the correct
+            explanation of Assertion.
+        </option>
+        <option name="B">
+            Both Assertion and Reason are true, but Reason is not the correct
+            explanation of Assertion.
+        </option>
+        <option name="C">Assertion is true, but Reason is false.</option>
+        <option name="D">Assertion is false, but Reason is true.</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q4" type="short_answer" marks="2" topic="Matrices &amp; Determinants">
+        <question>
+            If
+            \[
+                A=\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix},
+                \quad
+                B=\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix},
+            \]
+            find $AB$ and hence $\det(AB)$.
+        </question>
+        <answer>
+            $AB=\begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 0 \end{bmatrix}$ and
+            $\det(AB)=-3$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q5" type="numerical" marks="4" topic="Permutations &amp; Combinations">
+        <question>
+            The number of 4-letter arrangements of the letters of the word
+            EQUATION in which no two vowels are together is
+        </question>
+        <answer>
+            Consonants: $E,Q,T,N$ (4 distinct, $4!$ ways). Vowels: $U,A,I,O$
+            choose 2 of the 4 vowels $\binom{4}{2}=6$ ways and arrange them in
+            $2!$ ways, then place them in the 3 gaps formed by the consonants.
+            Total $=4!\times 6\times 2!=288$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q6" type="mcq" marks="1" topic="Coordinate Geometry">
+        <question>
+            The distance of the point $(1, 2)$ from the line
+            $3x+4y-5=0$ is
+        </question>
+        <option name="A">$\dfrac{8}{5}$</option>
+        <option name="B">$\dfrac{1}{5}$</option>
+        <option name="C">$\dfrac{12}{5}$</option>
+        <option name="D">$2$</option>
+        <answer>A</answer>
+    </question_body>
+
+    <question_body id="Q7" type="mcq" marks="1" topic="Trigonometry">
+        <question>
+            If $\sin\theta+\cos\theta=\sqrt{2}$, then $\sin 2\theta$ equals
+        </question>
+        <option name="A">$0$</option>
+        <option name="B">$1$</option>
+        <option name="C">$-1$</option>
+        <option name="D">$2$</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q8" type="short_answer" marks="2" topic="Limits &amp; Continuity">
+        <question>
+            Evaluate
+            \[
+                \lim_{x \to 0}\frac{1-\cos x}{x^{2}}.
+            \]
+        </question>
+        <answer>
+            Using $1-\cos x = 2\sin^{2}\tfrac{x}{2}$,
+            \[
+                \lim_{x\to0}\frac{2\sin^{2}(x/2)}{x^{2}}=\frac{1}{2}.
+            \]
+        </answer>
+    </question_body>
+
+    <question_body id="Q9" type="long_answer" marks="4" topic="Applications of Derivatives">
+        <question>
+            A factory produces $x$ units per day where the daily cost in rupees
+            is
+            \[
+                C(x)=5000+20x+0.5x^{2}.
+            \]
+            Answer the following.
+        </question>
+        <parts>
+            <part id="a" marks="1">
+                Find the marginal cost at $x=100$ units.
+            </part>
+            <part id="b" marks="1">
+                Find the average cost at $x=100$ units.
+            </part>
+            <part id="c" marks="2">
+                Using calculus, determine the production level at which the
+                average cost is minimised.
+            </part>
+        </parts>
+    </question_body>
+
+    <question_body id="Q10" type="short_answer" marks="2" topic="Integration">
+        <question>
+            Evaluate
+            \[
+                \int_{0}^{\pi/2}\sin^{2}x\,dx.
+            \]
+        </question>
+        <answer>
+            \[
+                \int_{0}^{\pi/2}\frac{1-\cos 2x}{2}\,dx
+                =\frac{\pi}{4}.
+            \]
+        </answer>
+    </question_body>
+
+    <question_body id="Q11" type="numerical" marks="4" topic="Coordinate Geometry">
+        <question>
+            The circle $x^{2}+y^{2}-6x+8y=0$ touches the $x$-axis and the
+            $y$-axis. Find the area enclosed by the circle and the coordinate
+            axes.
+        </question>
+        <answer>
+            $x^{2}+y^{2}-6x+8y=0$ gives centre $(3,-4)$ and radius $5$.
+            The required area is the area of the circle minus the two right
+            triangles cut off by the axes:
+            $\pi (5)^{2}-\tfrac{1}{2}(6)(8)=25\pi-24$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q12" type="mcq" marks="1" topic="Sets &amp; Relations">
+        <question>
+            If $A=\{1,2,3\}$ and $B=\{2,3,4\}$, then $A\cap B$ is
+        </question>
+        <option name="A">$\{1,4\}$</option>
+        <option name="B">$\{2,3\}$</option>
+        <option name="C">$\{1,2,3,4\}$</option>
+        <option name="D">$\varnothing$</option>
+        <answer>B</answer>
+    </question_body>
+
+</pyqs>

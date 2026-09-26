@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: JEE (Advanced) Mathematics, year 2023.
+
+  This file also demonstrates declared concepts:
+
+      <concepts>Matrices, Determinants</concepts>
+
+  Run:  pyqs concepts examples/jee_advanced_2023.xml (concept source: tag)
+        pyqs topics  examples/jee_advanced_2023.xml
+-->
+<pyqs version="1.0" latex="true" exam="JEE (Advanced)" year="2023" subject="Mathematics" board="IIT">
+
+    <question_body id="Q1" type="numerical" marks="4" topic="Matrices &amp; Determinants">
+        <concepts>Matrices, Determinants</concepts>
+        <question>
+            If $A$ is a $3\times3$ matrix with $\det(2A)=48$, find $\det A$.
+        </question>
+        <answer>
+            $\det(2A)=2^{3}\det A=8\det A=48$, so $\det A=6$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q2" type="numerical" marks="4" topic="Binomial Theorem">
+        <concepts>Binomial, Coefficients</concepts>
+        <question>
+            Find the term independent of $x$ in the expansion of
+            $\left(x^{2}+\dfrac{1}{x}\right)^{9}$.
+        </question>
+        <answer>
+            The general term is ${}^{9}C_{r}(x^{2})^{9-r}(x^{-1})^{r}
+            ={}^{9}C_{r}x^{18-3r}$. For a term free of $x$, $18-3r=0$, so
+            $r=6$ and the term is ${}^{9}C_{6}=84$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q3" type="long_answer" marks="6" topic="Differential Equations">
+        <concepts>First Order, Differential Equations</concepts>
+        <question>
+            Solve the differential equation and answer the parts below.
+            \[
+                (1+x^{2})\frac{dy}{dx}+2xy=0.
+            \]
+        </question>
+        <parts>
+            <part id="a" marks="2">Rewrite the equation in separable form.</part>
+            <part id="b" marks="2">Integrate to obtain the general solution.</part>
+            <part id="c" marks="2">
+                Find the particular solution passing through $(0, 5)$.
+            </part>
+        </parts>
+    </question_body>
+
+    <question_body id="Q4" type="numerical" marks="4" topic="Vectors &amp; 3-D Geometry">
+        <concepts>3-D Geometry, Direction Ratios</concepts>
+        <question>
+            Find the distance of the point $(1,-1,2)$ from the line joining
+            $(0,2,-1)$ and $(2,0,1)$.
+        </question>
+        <answer>
+            $\vec{AB}=(2,-2,2)$ and
+            $\vec{AC}=(1,-3,3)$, so
+            $|\vec{AB}\times\vec{AC}|=|\vec{AC}|=|\vec{AB}|=\sqrt{2}$ gives a
+            distance of $\sqrt{3}$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q5" type="mcq" marks="1" topic="Complex Numbers">
+        <question>
+            If $w$ is a cube root of unity, $w\ne 1$, then
+            $1+w+w^{2}$ equals
+        </question>
+        <option name="A">$0$</option>
+        <option name="B">$1$</option>
+        <option name="C">$-1$</option>
+        <option name="D">$w$</option>
+        <answer>A</answer>
+    </question_body>
+
+    <question_body id="Q6" type="numerical" marks="4" topic="Probability">
+        <concepts>Conditional Probability, Bayes</concepts>
+        <question>
+            Three unbiased coins are tossed. Given that at least two heads
+            appeared, find the probability of exactly two heads.
+        </question>
+        <answer>
+            $P(\ge 2 H)=\dfrac{4}{8}=\tfrac12$ and $P(2H)=\dfrac{3}{8}$, so the
+            conditional probability is $\dfrac{3}{4}=0.75$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q7" type="numerical" marks="4" topic="Integration">
+        <concepts>Definite Integrals, Area Under Curve</concepts>
+        <question>
+            Evaluate
+            \[
+                \int_{0}^{2}x\,|x-1|\,dx.
+            \]
+        </question>
+        <answer>
+            Splitting at $x=1$,
+            \[
+                \int_{0}^{1}x(1-x)\,dx+\int_{1}^{2}x(x-1)\,dx
+                =\frac{1}{6}+\frac{2}{3}=\frac{5}{6}.
+            \]
+        </answer>
+    </question_body>
+
+    <question_body id="Q8" type="mcq" marks="1" topic="Sequences &amp; Series">
+        <question>
+            The sum of the infinite geometric progression
+            $1+\tfrac{1}{3}+\tfrac{1}{9}+\dots$ is
+        </question>
+        <option name="A">$\tfrac{1}{2}$</option>
+        <option name="B">$\tfrac{2}{3}$</option>
+        <option name="C">$\tfrac{3}{2}$</option>
+        <option name="D">$3$</option>
+        <answer>C</answer>
+    </question_body>
+
+    <question_body id="Q9" type="short_answer" marks="2" topic="Quadratic Equations">
+        <question>
+            If $\alpha,\beta$ are roots of $x^{2}-3x+1=0$, find
+            $\dfrac{1}{\alpha}+\dfrac{1}{\beta}$.
+        </question>
+        <answer>
+            $\dfrac{\alpha+\beta}{\alpha\beta}=\dfrac{3}{1}=3$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q10" type="numerical" marks="4" topic="Applications of Derivatives">
+        <concepts>Maxima Minima, Optimisation</concepts>
+        <question>
+            A rectangle of perimeter $100$ is inscribed in a circle. Find the
+            maximum value of its area.
+        </question>
+        <answer>
+            For a rectangle with sides $a,b$ and $2(a+b)=100$, the diagonal is
+            $2R=10\sqrt2$ so $a^{2}+b^{2}=200$. The area is maximised at
+            $a=b=5\sqrt5$, giving $ab=125$.
+        </answer>
+    </question_body>
+
+</pyqs>

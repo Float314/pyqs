@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: JEE (Advanced) Mathematics, year 2024.
+
+  Shows a question whose marks are only declared on the sub-parts: the parser
+  sums them (2+1+1 = 4) and `pyqs marks` reports it under "marks from parts".
+
+  Run:  pyqs list examples/jee_advanced_2024.xml
+-->
+<pyqs version="1.0" latex="true" exam="JEE (Advanced)" year="2024" subject="Mathematics" board="IIT">
+
+    <question_body id="Q1" type="numerical" marks="4" topic="Matrices &amp; Determinants">
+        <concepts>Matrices, Adjoint</concepts>
+        <question>
+            If $A$ is a matrix of order $3$ with $\det A=5$, find $\det(\operatorname{adj} A)$.
+        </question>
+        <answer>
+            For a matrix of order $n$, $\det(\operatorname{adj} A)=(\det A)^{n-1}$,
+            so $\det(\operatorname{adj} A)=5^{2}=25$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q2" type="long_answer" topic="Coordinate Geometry">
+        <concepts>Conics, Tangent</concepts>
+        <question>
+            A line moves so that its distance from the origin is always equal
+            to the distance of its foot of perpendicular from the point
+            $(2,0)$. Find the locus of the line.
+        </question>
+        <parts>
+            <part id="a" marks="2">Set up the condition on the line's coefficients.</part>
+            <part id="b" marks="1">Derive the resulting condition on $c$ and $a$.</part>
+            <part id="c" marks="1">Identify the locus.</part>
+        </parts>
+    </question_body>
+
+    <question_body id="Q3" type="numerical" marks="4" topic="Complex Numbers">
+        <concepts>De Moivre, Complex Roots</concepts>
+        <question>
+            Find the number of roots of $z^{4}=1$ that satisfy
+            $\operatorname{Re}(z)>\operatorname{Im}(z)$.
+        </question>
+        <answer>
+            The roots are $1,i,-1,-i$. Comparing real and imaginary parts, only
+            $1$ and $-i$ qualify, so the answer is $2$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q4" type="numerical" marks="4" topic="Trigonometry">
+        <concepts>Trigonometric Identities, Transformations</concepts>
+        <question>
+            Evaluate
+            \[
+                \sum_{k=1}^{44}\sin^{2}\left(\frac{k\pi}{45}\right).
+            \]
+        </question>
+        <answer>
+            Using $\sum_{k=1}^{n-1}\sin^{2}\left(\frac{k\pi}{n}\right)=\frac{n-1}{2}$
+            with $n=45$, the sum is $\tfrac{44}{2}=22$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q5" type="numerical" marks="4" topic="Probability">
+        <concepts>Random Variables, Expectation</concepts>
+        <question>
+            A random variable $X$ takes the values $1,2,3$ with probabilities
+            $\tfrac16,\tfrac13,\tfrac12$. Find $E(X)$ and $\operatorname{Var}(X)$.
+        </question>
+        <answer>
+            $E(X)=\tfrac16+\tfrac23+\tfrac32=\tfrac73$ and
+            $E(X^{2})=\tfrac16+\tfrac43+\tfrac92=6$, so
+            $\operatorname{Var}(X)=6-\left(\tfrac73\right)^{2}=\tfrac59$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q6" type="assertion_reason" marks="1" topic="Limits &amp; Continuity">
+        <assertion>
+            The function $f(x)=x\sin\left(\tfrac1x\right)$ for $x\ne0$ and
+            $f(0)=0$ is continuous at $x=0$.
+        </assertion>
+        <reason>
+            $\left|x\sin\tfrac1x\right|\le |x|$.
+        </reason>
+        <option name="A">
+            Both Assertion and Reason are true, and Reason is the correct
+            explanation of Assertion.
+        </option>
+        <option name="B">
+            Both Assertion and Reason are true, but Reason is not the correct
+            explanation of Assertion.
+        </option>
+        <option name="C">Assertion is true, but Reason is false.</option>
+        <option name="D">Assertion is false, but Reason is true.</option>
+        <answer>A</answer>
+    </question_body>
+
+    <question_body id="Q7" type="short_answer" marks="2" topic="Permutations &amp; Combinations">
+        <question>
+            How many 5-digit numbers can be formed using the digits
+            $1,2,3,4,5$ if repetition is allowed and the number must be
+            divisible by $5$?
+        </question>
+        <answer>
+            The units digit is $5$, the remaining four places each have $5$
+            choices, so the answer is $5^{4}=625$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q8" type="numerical" marks="4" topic="Vectors &amp; 3-D Geometry">
+        <concepts>Scalar Triple Product</concepts>
+        <question>
+            Find the volume of the tetrahedron with vertices
+            $(0,0,0)$, $(1,1,1)$, $(1,0,0)$ and $(0,1,1)$.
+        </question>
+        <answer>
+            $V=\tfrac16\left|\vec{a}\cdot(\vec{b}\times\vec{c})\right|
+            =\tfrac16\left|(1,1,1)\cdot(0,-1,1)\right|=\tfrac16$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q9" type="mcq" marks="1" topic="Sets &amp; Relations">
+        <question>
+            If $f:A\to B$ is a one-one onto function then the number of inverse
+            functions from $B$ to $A$ is
+        </question>
+        <option name="A">$0$</option>
+        <option name="B">$1$</option>
+        <option name="C">$n!$</option>
+        <option name="D">Infinitely many</option>
+        <answer>B</answer>
+    </question_body>
+
+</pyqs>

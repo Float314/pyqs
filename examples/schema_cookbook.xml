@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: schema cookbook.
+
+  One small file that exercises the corners of the format, each question
+  demonstrating a single feature:
+
+    Q1  <parts> container plus nested sub-parts
+    Q2  topic supplied as a <topic> child element instead of an attribute
+    Q3  marks written as "2 marks" instead of a bare number
+    Q4  question with no id at all (pyqs generates one, and warns)
+    Q5  an unknown type string, kept verbatim instead of being dropped
+    Q6  <tags> wrapper around <tag> children
+
+  It is also the file that produces parse warnings, so it is a handy fixture:
+
+    pyqs validate examples/schema_cookbook.xml
+    pyqs validate examples/schema_cookbook.xml (strict mode exits 3)
+-->
+<pyqs version="1.0" latex="true" exam="Cookbook" year="2025" subject="General Mathematics">
+
+    <question_body id="Q1" type="long_answer" marks="4" topic="Calculus">
+        <question>
+            Study $f(x)=x^{4}-4x^{3}$ using the parts below.
+        </question>
+        <parts>
+            <part id="a" marks="1">Find $f'(x)$.</part>
+            <part id="b" marks="1">
+                Find the second derivative.
+                <part id="b1" marks="1">Differentiate $f'(x)$.</part>
+                <part id="b2" marks="1">Evaluate it at $x=1$.</part>
+            </part>
+            <part id="c" marks="1">Find the stationary points.</part>
+        </parts>
+    </question_body>
+
+    <question_body id="Q2" type="short_answer" marks="2">
+        <topic>Sequences</topic>
+        <question>
+            Find the $20$th term of $5, 9, 13, \dots$.
+        </question>
+        <answer>
+            $a_{20}=5+19\times 4=81$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q3" type="short_answer" marks="2 marks" topic="Sequences">
+        <question>
+            Find the $10$th term of $1, 4, 9, 16, \dots$.
+        </question>
+        <answer>
+            $a_{10}=10^{2}=100$.
+        </answer>
+    </question_body>
+
+    <question_body type="numerical" marks="3" topic="Vectors">
+        <question>
+            If $\vec{a}=(1,2,3)$ and $\vec{b}=(3,2,1)$, find
+            $\vec{a}\cdot\vec{b}$.
+        </question>
+        <answer>
+            $\vec{a}\cdot\vec{b}=3+4+3=10$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q5" type="viva_voce" marks="1" topic="Geometry">
+        <question>
+            Define a regular hexagon in one sentence.
+        </question>
+    </question_body>
+
+    <question_body id="Q6" type="mcq" marks="1" topic="Statistics">
+        <tags>
+            <tag>Mean</tag>
+            <tag>Median</tag>
+        </tags>
+        <question>
+            For the data $2,4,4,6,9$, the median is
+        </question>
+        <option>A</option>
+        <option name="B">$4$</option>
+        <option name="C">$5$</option>
+        <option name="D">$6$</option>
+        <answer>B</answer>
+    </question_body>
+
+</pyqs>

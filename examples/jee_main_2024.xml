@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  pyqs example question bank: JEE (Main) Mathematics, session 2024.
+
+  Deliberately different from jee_main_2023.xml: the calculus weight goes up,
+  probability disappears, and case-based / matching question types appear. Use
+  it with the 2023 paper to try `pyqs compare` and `pyqs trend`.
+
+  Run:  pyqs compare examples/jee_main_2023.xml against examples/jee_main_2024.xml
+        pyqs trend  examples/jee_main_202*.xml
+-->
+<pyqs version="1.0" latex="true" exam="JEE (Main)" year="2024" subject="Mathematics" board="CBSE">
+
+    <question_body id="Q1" type="mcq" marks="1" topic="Limits &amp; Continuity">
+        <question>
+            \[
+                \lim_{x \to 0}\frac{e^{x}-1}{x}
+            \]
+            equals
+        </question>
+        <option name="A">$0$</option>
+        <option name="B">$1$</option>
+        <option name="C">$e$</option>
+        <option name="D">Does not exist</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q2" type="mcq" marks="1" topic="Complex Numbers">
+        <question>
+            The modulus of $1+i\sqrt{3}$ is
+        </question>
+        <option name="A">$1$</option>
+        <option name="B">$2$</option>
+        <option name="C">$4$</option>
+        <option name="D">$\sqrt{2}$</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q3" type="short_answer" marks="2" topic="Differentiation">
+        <question>
+            Differentiate $y=x^{3}\cos x$ with respect to $x$.
+        </question>
+        <answer>
+            By the product rule,
+            \[
+                \frac{dy}{dx}=3x^{2}\cos x-x^{3}\sin x.
+            \]
+        </answer>
+    </question_body>
+
+    <question_body id="Q4" type="numerical" marks="4" topic="Integration">
+        <question>
+            Evaluate
+            \[
+                \int_{1}^{e}\frac{1}{x}\,dx + \int_{0}^{1}x^{2}\,dx.
+            \]
+        </question>
+        <answer>
+            The first integral equals $\left[\log x\right]_{1}^{e}=1$ and the
+            second equals $\left[\tfrac{x^{3}}{3}\right]_{0}^{1}=\tfrac13$, so
+            the required value is $\tfrac{4}{3}\approx 1.3333$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q5" type="long_answer" marks="4" topic="Differential Equations">
+        <question>
+            Solve $\dfrac{dy}{dx}=3x^{2}$ subject to $y(0)=4$.
+        </question>
+        <parts>
+            <part id="a" marks="1">Separate the variables and integrate.</part>
+            <part id="b" marks="1">Obtain the general solution.</part>
+            <part id="c" marks="2">Use the initial condition to find the constant.</part>
+        </parts>
+        <answer>
+            $y=x^{3}+C$ and $C=4$, so $y=x^{3}+4$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q6" type="mcq" marks="1" topic="Trigonometry">
+        <question>
+            The value of $\tan^{-1}1+\tan^{-1}\tfrac{1}{2}+\tan^{-1}\tfrac{1}{3}$ is
+        </question>
+        <option name="A">$\dfrac{\pi}{6}$</option>
+        <option name="B">$\dfrac{\pi}{4}$</option>
+        <option name="C">$\dfrac{\pi}{3}$</option>
+        <option name="D">$\dfrac{\pi}{2}$</option>
+        <answer>B</answer>
+    </question_body>
+
+    <question_body id="Q7" type="short_answer" marks="2" topic="Vectors &amp; 3-D Geometry">
+        <question>
+            A line passes through $A(1,2,3)$ and is parallel to
+            $\vec{a}=2\hat{i}-\hat{j}+2\hat{k}$. Find a direction vector of the
+            line.
+        </question>
+        <answer>
+            The direction ratios are $(2,-1,2)$, so the line is
+            $(x,y,z)=(1,2,3)+\lambda(2,-1,2)$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q8" type="assertion_reason" marks="1" topic="Binomial Theorem">
+        <assertion>
+            The coefficient of $x^{50}$ in $(1+x)^{100}$ is
+            ${}^{100}C_{50}$.
+        </assertion>
+        <reason>
+            In the binomial expansion the general term is
+            ${}^{n}C_{r}x^{r}$.
+        </reason>
+        <option name="A">
+            Both Assertion and Reason are true, and Reason is the correct
+            explanation of Assertion.
+        </option>
+        <option name="B">
+            Both Assertion and Reason are true, but Reason is not the correct
+            explanation of Assertion.
+        </option>
+        <option name="C">Assertion is true, but Reason is false.</option>
+        <option name="D">Assertion is false, but Reason is true.</option>
+        <answer>A</answer>
+    </question_body>
+
+    <question_body id="Q9" type="case_based" marks="6" topic="Probability">
+        <question>
+            Read the following case study and answer the questions that follow.
+
+            A bag contains 4 red, 3 blue and 2 green balls. Two balls are drawn
+            at random without replacement.
+        </question>
+        <parts>
+            <part id="a" marks="2">
+                Find the probability that both balls are red.
+            </part>
+            <part id="b" marks="2">
+                Find the probability that the balls are of different colours.
+            </part>
+            <part id="c" marks="2">
+                A single ball is drawn after the two draws. Given that it is
+                green, what is the probability it came from the original bag of
+                9?
+            </part>
+        </parts>
+    </question_body>
+
+    <question_body id="Q10" type="matching" marks="4" topic="Coordinate Geometry">
+        <question>
+            Match each conic with its focus.
+        </question>
+        <parts>
+            <part id="a" marks="1">$x^{2}=12y$</part>
+            <part id="b" marks="1">$x^{2}=16-y^{2}$</part>
+            <part id="c" marks="1">$\dfrac{x^{2}}{25}-\dfrac{y^{2}}{9}=1$</part>
+            <part id="d" marks="1">$\dfrac{x^{2}}{16}+\dfrac{y^{2}}{9}=1$</part>
+        </parts>
+        <options>
+            <option name="P">Parabola</option>
+            <option name="Q">Circle</option>
+            <option name="R">Hyperbola</option>
+            <option name="S">Ellipse</option>
+        </options>
+    </question_body>
+
+    <question_body id="Q11" type="numerical" marks="4" topic="Sequences &amp; Series">
+        <question>
+            If the sum of the first $20$ terms of an arithmetic progression is
+            $210$ and the sum of the first $15$ terms is $150$, find the
+            twentieth term of the progression.
+        </question>
+        <answer>
+            $S_{20}=210 \Rightarrow 10(2a+19d)=210$, $S_{15}=150 \Rightarrow
+            \tfrac{15}{2}(2a+14d)=150$, giving $d=1$, $a=-4$, so
+            $a_{20}=-4+19=15$.
+        </answer>
+    </question_body>
+
+    <question_body id="Q12" type="mcq" marks="1" topic="Sets &amp; Relations">
+        <question>
+            The number of subsets of a set with $3$ elements is
+        </question>
+        <option name="A">$6$</option>
+        <option name="B">$7$</option>
+        <option name="C">$8$</option>
+        <option name="D">$9$</option>
+        <answer>C</answer>
+    </question_body>
+
+</pyqs>
